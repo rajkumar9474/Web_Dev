@@ -1,0 +1,21 @@
+#div1{
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    background-color: aqua;
+    border-width: 3px;
+    border-style: solid;
+    border-color: blue;
+    border-radius: 50%;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin:50px;
+}
+#div2{
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    background-color:blueviolet;
+}

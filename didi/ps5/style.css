@@ -1,0 +1,10 @@
+div{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    background-image: url(imag1.jpg);
+    background-size: cover;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+}

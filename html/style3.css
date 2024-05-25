@@ -1,0 +1,95 @@
+div{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    transition-property: all;
+    transition-duration: 500ms;
+    border-radius: 20%;
+    display: inline-block;
+}
+#box1:hover{
+    height: 100px;
+    width: 100px;
+    background-color: brown;
+    border-radius: 50%;
+    transform: rotatez(360deg);
+    scale: 2;
+}
+#box2:hover{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(165, 130, 42);
+    border-radius: 50%;
+    transform: rotatez(360deg);
+    scale: 2;
+}
+#box3:hover{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(128, 174, 248);
+    border-radius: 50%;
+    transform: rotatez(360deg);
+    scale: 2;
+}
+#box4:hover{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(152, 83, 115);
+    border-radius: 50%;
+    transform: rotatez(360deg);
+    scale: 2;
+}
+#box5:hover{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(99, 42, 165);
+    border-radius: 50%;
+    transform: rotatez(360deg);
+    scale: 2;
+}
+#box6:hover{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(42, 52, 165);
+    border-radius: 50%;
+    transform: rotatez(360deg);
+    scale: 2;
+}
+#box7:hover{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(42, 163, 165);
+    border-radius: 50%;
+    transform: rotatez(360deg);
+    scale: 2;
+}
+#box8:hover{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(50, 165, 42);
+    border-radius: 50%;
+    transform: rotatez(360deg);
+    scale: 2;
+}
+#box9:hover{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(204, 255, 0);
+    border-radius: 50%;
+    transform: rotatez(360deg);
+    scale: 2;
+}
+#box10:hover{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(165, 42, 128);
+    border-radius: 50%;
+    transform: rotatez(360deg);
+    scale: 2;
+}
+#box11:hover{
+    translate: 90px 90px;
+}
+#box12:hover{
+    transform: skew(-60deg);
+}

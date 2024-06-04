@@ -1,3 +1,11 @@
+{/* <h2>Hello java script</h2>
+    <hr>
+    <div class="box">box 1</div>
+    <div class="box">box 2</div>
+    <div class="box">box 3</div>
+
+    <script src="q4.js"></script> */}
+
 // create a H2 heading element with text - "hello javascript". append "from apna college students" to the text using Js
 
 let h2 = document.querySelector("h2");

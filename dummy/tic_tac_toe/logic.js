@@ -4,7 +4,6 @@ let turnO = true;
 let newGameBtn = document.querySelector(".new_btn");
 let msgCont = document.querySelector(".msg_container")
 let msg = document.querySelector(".msg");
-let count = 0;
 
 
 const win = [[0,1,2],
@@ -33,7 +32,6 @@ boxes.forEach((box)=>{
         turnO = true;
     }
     box.disabled = true;
-    console.log(count);
     checkWinner();
 });
 });

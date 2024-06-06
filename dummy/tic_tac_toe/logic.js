@@ -22,7 +22,6 @@ const showWinner = (win) => {
 
 boxes.forEach((box)=>{
     box.addEventListener("click",()=>{
-        count++;
     if(turnO){
         box.innerText = "O";
         turnO = false;
@@ -59,7 +58,6 @@ const resetGame = () => {
         box.innerText = "";
     })
     msgCont.classList.add("hide");
-    count = 0;
 }
 
 newGameBtn.addEventListener("click",resetGame);

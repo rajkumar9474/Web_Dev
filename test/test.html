@@ -5,22 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        
-        div{
-            width: 400px;
-            height: 400px;
-            background-color: green;
-            border-width: 20px;
-            /* border-style: solid; */
-            border-image:linear-gradient(#f6b73c, #4d9f0c) 30;
-            /* border-image-outset: 1px; */
-            /* border-top-: 20px; */
-            /* border-block-start-width: 20px; */
-            /* border-block: ; */
+        .content{
+            height:400px;
+            width:400px;
+            border: 1px solid black;
+            background: conic-gradient(orange,black);
+            display:grid;
+            grid-gap:10px 20px;
+            grid-template-columns: auto auto auto;
+        }
+        .box{
+            height:100px;
+            width: 100px;
+            background-color: turquoise;
         }
     </style>
 </head>
 <body>
-    <div></div>
+    <div class="content">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
 </body>
 </html>

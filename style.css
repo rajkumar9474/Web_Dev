@@ -1,0 +1,142 @@
+body{
+    margin: 0;
+    padding: 0;
+    /* background-color: rgba(0,0,0,0.8); */
+    color: white;
+    position: relative;
+    }
+.nav-behind{
+    height:9vh;
+}
+header{
+    height: 9vh;
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    justify-content: space-between;
+    position: fixed;
+    background-color: #000000;
+}
+.title{
+    font-size: 30px;
+    color: #ff0000;
+}
+.nav-title{
+    display: flex;
+    justify-content: space-evenly;
+}
+.nav-title a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+.gap{
+    margin-inline: 4rem;
+}
+.margin{
+    margin-inline: 50px;
+}
+.nav-title a:hover{
+    color:#ff0000;
+}
+
+/* welcome section */
+.welcome{
+    color: #ff0000;
+    height: 91vh;
+    /* border: 2px solid red; */
+    background-image:  linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,.9)),url(welcome.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.welcome{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.pro-title{
+    font-family: monospace;
+    font-weight: 600;
+    font-size: 100px;
+    text-wrap: wrap;
+}
+.span-profile{
+    color:yellow
+}
+.pro-des{
+    color: white;
+    font-size: 20px;
+    text-wrap: wrap;
+}
+.photo img{
+    border-radius: 50%;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.button a{
+    border:1px solid red;
+    border-radius: 20px;
+    padding-inline: 10px;
+    padding-block: 5px;
+    margin-inline: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.break{
+    background-color: rgba(0,0,0,0.8);
+}
+.skill{
+    height: 100vh;
+    color:white;
+    background-image:  linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,.9)),url(skill.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.div-skill,.div-projects{
+    font-style: italic;
+    color: yellow;
+    font-size: 80px;
+}
+dt{
+    font-family: monospace;
+    font-weight: 600;
+    font-size: 40px;
+    color: #ff0000;
+    
+}
+dd{
+    font-size: 20px;
+}
+.projects{
+    height: 100vh;
+    color:white;
+    background-image:  linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,.9)),url(projects.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.projects a{
+    text-decoration: none;
+    color: #ff0000;
+    margin-left: 10px;
+}

@@ -10,17 +10,17 @@ body{
 }
 header{
     height: 9vh;
-    width: 100%;
+    width: 100vw;
     /* border: 1px solid black; */
     display: flex;
     align-items: center;
     /* justify-content: center; */
-    justify-content: space-between;
+    justify-content: space-around;
     position: fixed;
     background-color: #000000;
 }
 .title{
-    font-size: 30px;
+    font-size: 2rem;
     color: #ff0000;
 }
 .nav-title{
@@ -36,10 +36,10 @@ header{
     color: white;
 }
 .gap{
-    margin-inline: 4rem;
+    margin-inline: 1rem;
 }
 .margin{
-    margin-inline: 50px;
+    margin-inline: 4rem;
 }
 .nav-title a:hover{
     color:#ff0000;
@@ -58,21 +58,23 @@ header{
 
 .welcome{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
 }
 .pro-title{
     font-family: monospace;
     font-weight: 600;
-    font-size: 100px;
+    font-size: 3em;
     text-wrap: wrap;
 }
 .span-profile{
     color:yellow
 }
 .pro-des{
+    margin-block: 3rem;
     color: white;
-    font-size: 20px;
+    font-size: 1rem;
     text-wrap: wrap;
 }
 .photo img{
@@ -81,7 +83,7 @@ header{
 .button{
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-block: 20px;
 }
 .button a{
     border:1px solid red;
@@ -116,12 +118,12 @@ header{
 dt{
     font-family: monospace;
     font-weight: 600;
-    font-size: 40px;
+    font-size: 2rem;
     color: #ff0000;
     
 }
 dd{
-    font-size: 20px;
+    font-size: 1rem;
 }
 .projects{
     height: 100vh;
@@ -139,4 +141,10 @@ dd{
     text-decoration: none;
     color: #ff0000;
     margin-left: 10px;
+}
+
+@media (max-width:660px) {
+    .welcome,.skill,.projects{
+        background:black ;
+    }
 }

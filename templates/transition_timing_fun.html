@@ -5,6 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="TTF.css">
     <title>transition timing function</title>
+    <style>
+        div{
+    margin: 50px 0;
+    padding: 10px 10px;
+    background-color: aqua;
+    position:relative;
+}
+span{
+    display: inline-block;
+    height:40px;
+    width: 0px;
+    background-color: rgb(255, 19, 19);
+    transition-property: all;
+    transition-duration: 2s;
+    font-size: 30px;
+    color:rgb(69, 252, 23)
+}
+div:hover span{
+    width: 100%;
+}
+.one{
+    transition-timing-function:ease;
+}
+.two{
+    transition-timing-function:ease-in;
+}
+.three{
+    transition-timing-function:ease-out;
+}
+.four{
+    transition-timing-function:ease-in-out;
+}
+.five{
+    transition-timing-function:linear;
+}
+.six{
+    transition-timing-function:steps(6);
+}
+.seven{
+    transition-timing-function:step-end;
+}
+.eight{
+    transition-timing-function:step-start;
+}
+    </style>
 </head>
 <body>
     <h1>different types of transition timing functions</h1>

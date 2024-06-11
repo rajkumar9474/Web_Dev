@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 30px;
+        }
+       
+        .first-row,.second-row{
+            display: flex;
+        }
+        .first,.second,.third,.fourth{
+            width: 200px;
+            height: 200px;
+            border: 2px solid rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .first{
+            animation:slidetop 1s ease forwards;
+            animation-duration: calc(1s*var(--i));
+            
+        }
+        .second{
+            animation:slidebottom 1s ease forwards;
+            animation-duration: calc(1s*var(--i));
+        }
+        .third{
+            animation:slideleft 1s ease forwards;
+            animation-duration: calc(1s*var(--i));
+        }
+        .fourth{
+            animation:slideright 1s ease forwards;
+            animation-duration: calc(1s*var(--i));
+        }
+        @keyframes slidetop{
+            from{
+                transform: translateY(-200px);
+            }
+            to{
+                transform: translateY(0px);
+            }
+        }
+        @keyframes slidebottom{
+            from{
+                transform: translateY(200px);
+            }
+            to{
+                transform: translateY(0px);
+            }
+        }
+        @keyframes slideleft{
+            from{
+                transform: translateX(200px);
+            }
+            to{
+                transform: translateX(0px);
+            }
+        }
+        @keyframes slideright{
+            from{
+                transform: translateX(-200px);
+            }
+            to{
+                transform: translateX(0px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="first-row">
+            <div class="first" style="--i:1">this is the text</div>
+            <div class="second" style="--i:2">this is the text</div>
+        </div>
+        <div class="second-row">
+            <div class="third" style="--i:3">this is the text</div>
+            <div class="fourth" style="--i:4">this is the text</div>
+        </div>
+    </div>
+</body>
+</html>

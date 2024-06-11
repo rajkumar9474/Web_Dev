@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .layer1{
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            background: rgba(255,00,00,0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .layer2{
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            background: rgba(00,255,00,0.2); 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        a{
+            color: bisque;
+            text-decoration: none;
+            box-sizing: border-box;
+            padding: 5px 12px 5px 10px;
+            background-color: black;
+            border-radius: 30px;
+        }
+        .layer1 a{
+            animation: slideup ease-in-out forwards;
+            animation-iteration-count: infinite;
+            animation-delay: calc(.2s * var(--i));
+        }
+        .layer2 a{
+            animation: slidedown ease-in-out forwards;
+            animation-iteration-count: infinite;
+            animation-delay: calc(.2s * var(--i));
+        }
+        .layer1 a , .layer2 a{
+            animation-duration: 5s;
+        }
+        @keyframes slideup {
+            0%{
+                transform: translateY(200px);
+            }
+            50%{
+               transform: translateY(-200px);
+            }
+            100%{
+                transform: translateY(200px);
+            }
+        }
+        @keyframes slidedown {
+            0%{
+                transform: translateY(-200px);
+            }
+            50%{
+               transform: translateY(200px);
+            }
+            100%{
+                transform: translateY(-200px);
+            }
+        }
+        .input-box{
+            position: absolute;
+            display: flex;
+            
+        }
+        input,button{
+            z-index: 10;
+        }
+        label{
+            width: 200px;
+            height: 20px;
+            border: 2px solid black;
+            /* background: black; */
+        }
+    </style>
+</head>
+<body>
+    <div class="input-box">
+        <!-- <input type="text" id="userInput" placeholder="time in seconds" oninput="updateLabel()">
+        <label id="displayLabel"></label> -->
+        <label for="animationDuration">Animation Duration (seconds):</label>
+        <input type="number" id="animationDuration" min="1" value="5">
+        <label for="animationDelay">Animation Delay (seconds):</label>
+        <input type="number" id="animationDelay" min="1" value="5">
+        <button onclick="updateAnimationDuration()">Update</button>
+
+    </div>
+    <div class="layer1">
+        <a href="#" style="--i:1">a</a>
+        <a href="#" style="--i:2">a</a>
+        <a href="#" style="--i:3">a</a>
+        <a href="#" style="--i:4">a</a>
+        <a href="#" style="--i:5">a</a>
+        <a href="#" style="--i:6">a</a>
+        <a href="#" style="--i:7">a</a>
+        <a href="#" style="--i:8">a</a>
+        <a href="#" style="--i:9">a</a>
+        <a href="#" style="--i:10">a</a>
+        <a href="#" style="--i:11">a</a>
+        <a href="#" style="--i:12">a</a>
+        <a href="#" style="--i:13">a</a>
+        <a href="#" style="--i:14">a</a>
+        <a href="#" style="--i:15">a</a>
+        <a href="#" style="--i:16">a</a>
+        <a href="#" style="--i:17">a</a>
+        <a href="#" style="--i:18">a</a>
+        <a href="#" style="--i:19">a</a>
+        <a href="#" style="--i:20">a</a>
+        <a href="#" style="--i:21">a</a>
+        <a href="#" style="--i:22">a</a>
+        <a href="#" style="--i:23">a</a>
+        <a href="#" style="--i:24">a</a>
+        <a href="#" style="--i:25">a</a>
+        <a href="#" style="--i:26">a</a>
+        <a href="#" style="--i:27">a</a>
+        <a href="#" style="--i:28">a</a>
+        <a href="#" style="--i:29">a</a>
+        <a href="#" style="--i:30">a</a>
+        <a href="#" style="--i:31">a</a>
+        <a href="#" style="--i:32">a</a>
+        <a href="#" style="--i:33">a</a>
+        <a href="#" style="--i:34">a</a>
+        <a href="#" style="--i:35">a</a>
+        <a href="#" style="--i:36">a</a>
+        <a href="#" style="--i:37">a</a>
+        <a href="#" style="--i:38">a</a>
+        <a href="#" style="--i:39">a</a>
+        <a href="#" style="--i:40">a</a>
+        <a href="#" style="--i:41">a</a>
+        <a href="#" style="--i:42">a</a>
+        <a href="#" style="--i:43">a</a>
+        <a href="#" style="--i:44">a</a>
+        <a href="#" style="--i:45">a</a>
+        <a href="#" style="--i:46">a</a>
+        <a href="#" style="--i:47">a</a>
+        <a href="#" style="--i:48">a</a>
+        <a href="#" style="--i:49">a</a>
+        <a href="#" style="--i:50">a</a>
+        <a href="#" style="--i:51">a</a>
+    </div>
+    <div class="layer2">
+        <a href="#" style="--i:1">a</a>
+        <a href="#" style="--i:2">a</a>
+        <a href="#" style="--i:3">a</a>
+        <a href="#" style="--i:4">a</a>
+        <a href="#" style="--i:5">a</a>
+        <a href="#" style="--i:6">a</a>
+        <a href="#" style="--i:7">a</a>
+        <a href="#" style="--i:8">a</a>
+        <a href="#" style="--i:9">a</a>
+        <a href="#" style="--i:10">a</a>
+        <a href="#" style="--i:11">a</a>
+        <a href="#" style="--i:12">a</a>
+        <a href="#" style="--i:13">a</a>
+        <a href="#" style="--i:14">a</a>
+        <a href="#" style="--i:15">a</a>
+        <a href="#" style="--i:16">a</a>
+        <a href="#" style="--i:17">a</a>
+        <a href="#" style="--i:18">a</a>
+        <a href="#" style="--i:19">a</a>
+        <a href="#" style="--i:20">a</a>
+        <a href="#" style="--i:21">a</a>
+        <a href="#" style="--i:22">a</a>
+        <a href="#" style="--i:23">a</a>
+        <a href="#" style="--i:24">a</a>
+        <a href="#" style="--i:25">a</a>
+        <a href="#" style="--i:26">a</a>
+        <a href="#" style="--i:27">a</a>
+        <a href="#" style="--i:28">a</a>
+        <a href="#" style="--i:29">a</a>
+        <a href="#" style="--i:30">a</a>
+        <a href="#" style="--i:31">a</a>
+        <a href="#" style="--i:32">a</a>
+        <a href="#" style="--i:33">a</a>
+        <a href="#" style="--i:34">a</a>
+        <a href="#" style="--i:35">a</a>
+        <a href="#" style="--i:36">a</a>
+        <a href="#" style="--i:37">a</a>
+        <a href="#" style="--i:38">a</a>
+        <a href="#" style="--i:39">a</a>
+        <a href="#" style="--i:40">a</a>
+        <a href="#" style="--i:41">a</a>
+        <a href="#" style="--i:42">a</a>
+        <a href="#" style="--i:43">a</a>
+        <a href="#" style="--i:44">a</a>
+        <a href="#" style="--i:45">a</a>
+        <a href="#" style="--i:46">a</a>
+        <a href="#" style="--i:47">a</a>
+        <a href="#" style="--i:48">a</a>
+        <a href="#" style="--i:49">a</a>
+        <a href="#" style="--i:50">a</a>
+        <a href="#" style="--i:51">a</a>
+    </div>
+    <script>
+        function updateAnimationDuration() {
+            // Get the input element
+            var durationInput = document.getElementById("animationDuration");
+            var delayInput = document.getElementById("animationDelay");
+
+            // Get the value from the input element
+            var durationValue = durationInput.value;
+            var delayValue = delayInput.value;
+
+            // Get all elements with class "layer1" and "layer2"
+            var layer1Links = document.querySelectorAll('.layer1 a');
+            var layer2Links = document.querySelectorAll('.layer2 a');
+
+            // Update animation duration for layer1 links
+            layer1Links.forEach(function(link) {
+                link.style.animationDuration = durationValue + 's';
+                link.style.animationDelay = 'calc('+delayValue+'s * var(--i))';
+            });
+
+            // Update animation duration for layer2 links
+            layer2Links.forEach(function(link) {
+                link.style.animationDuration = durationValue + 's';
+                link.style.animationDelay = 'calc('+delayValue+'s * var(--i))';
+            });
+        }
+
+    </script>
+</body>
+
+</html>

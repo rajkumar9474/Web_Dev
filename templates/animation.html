@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        div{
+            display: flex;
+            height: 90vh;
+            justify-content: center;
+            align-items: center;
+        }
+        a{
+            position: relative;
+            box-sizing: border-box;
+            color:wheat;
+            font-size: 20px;
+            background-color: black;
+            padding: 5px 15px 10px 15px;
+            text-decoration: none;
+            border-radius: 50%; 
+            margin-left: 20px;
+            opacity: 0;
+            animation: slidedown 5s ease forwards;
+            animation-delay: calc(.1s * var(--i));
+        }
+        @keyframes slidedown{
+            0%{
+                transform: translateY(-400px);
+                opacity: 1;
+            }
+            10%{
+                transform: translateY(400px);
+                
+            }
+            20%{
+                transform: translateY(-300px);
+                
+            }
+            30%{
+                transform: translateY(300px);
+                
+            }
+            40%{
+                transform: translateY(-200px);
+
+            }
+            50%{
+                transform: translateY(200px);
+            }
+            60%{
+                transform: translateX(-100);
+            }
+            70%{
+                transform: translateX(100);
+                
+            }
+            80%{
+                transform: translateX(-50);
+            }
+            90%{
+                transform: translateX(50);
+            }
+            100%{
+                transform: translateX(0);
+                opacity: 1;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <p>refresh the page to see the effect</p>
+    <div>
+        <a href="#" style="--i:1">a</a>
+        <a href="#" style="--i:2">a</a>
+        <a href="#" style="--i:3">a</a>
+        <a href="#" style="--i:4">a</a>
+        <a href="#" style="--i:5">a</a>
+        <a href="#" style="--i:6">a</a>
+        <a href="#" style="--i:7">a</a>
+        <a href="#" style="--i:8">a</a>
+        <a href="#" style="--i:9">a</a>
+        <a href="#" style="--i:10">a</a>
+        <a href="#" style="--i:11">a</a>
+        <a href="#" style="--i:12">a</a>
+        <a href="#" style="--i:13">a</a>
+        <a href="#" style="--i:14">a</a>
+        <a href="#" style="--i:15">a</a>
+    </div>
+</body>
+</html>

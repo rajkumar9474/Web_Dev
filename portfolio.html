@@ -8,64 +8,142 @@
         *{
             padding: 0;
             margin: 0;
-
+            font-size: large;
+            font-weight: 600;
+            font-family:'Courier New', Courier, monospace
         }
         body{
             background-color: #fff;
         }
-        .nav-bar{
-            background-color: #b9b9b9;
+        header{
             width: 100%;
             height: 10vh;
+            background-color: #b9b9b9;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .options{
+            text-transform: uppercase;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        .botton{
-            background-color: #8e8e8e;
-            padding-top: 5px;
-            padding-inline: 10px;
-            width: auto;
-            height: 30px;
-            border-radius: 30px;
-            box-shadow: 0 0 5px black;
-        }
-        .below{
-            width: 100%;
-            height: 10px;
+        .button:hover{
+            text-shadow:0 0 20px #000;
         }
         span{
             margin-top: 4px;
             display: block;
             width: 0%;
-            height:7px;
+            height:3px;
             background-color: black;
             transition-property: all;
-            transition-duration: 1s;
+            transition-duration: .5s;
             border-radius: 40px;
         }
-        .botton-cont:hover span{
+        .button-cont:hover span{
             width: 100%;
         }
-        .botton-cont{
+        .button-cont{
             margin-right:20px ;
+            text-decoration: none;
+            color: black;
         }
+        .image{
+            margin-left: 1rem;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            background-color: black;
+        }
+        .side{
+            position: absolute;
+            top:0;
+            right: 0;
+            width: 400px;
+            height: 400px;
+            backdrop-filter: blur(10px);
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .side .options{
+            flex-direction: column;
+            justify-content: space-between;
+            position: static;
+            box-sizing: border-box;
+        }
+        .side .options .button-cont{
+            margin-top: 4rem;
+        }
+        .side:hover{
+            animation: slideclose 1s ease-in forwards;
+
+        }
+        @keyframes slideclose{
+            from{
+                transform: translateY(0px);
+            }
+            to{
+                transform: translate(400px);
+            }
+        }
+
     </style>
 </head>
 <body>
-    <div class="nav-bar">
-
-        <div class="botton-cont" >
-            <div class="botton">home</div>
-            <div class="below"><span></span></div>
+    <header>
+        <div class="logo">
+            <a href="#"><div class="image"></div></a>
         </div>
-        <div class="botton-cont" >
-            <div class="botton">about</div>
-            <div class="below"><span></span></div>
+        <div class="options">
+            <a href="#" class="button-cont" >
+                <div class="button">home</div>
+                <div class="below"><span></span></div>
+            </a>
+            <a href="#" class="button-cont" >
+                <div class="button">portfolio</div>
+                <div class="below"><span></span></div>
+            </a>
+            <a href="#" class="button-cont" >
+                <div class="button">about</div>
+                <div class="below"><span></span></div>
+            </a>
+            <a href="#" class="button-cont" >
+                <div class="button">contact</div>
+                <div class="below"><span></span></div>
+            </a>
+            <a href="#" class="button-cont" >
+                <div class="button">contact</div>
+                <div class="below"><span></span></div>
+            </a>
         </div>
-        <div class="botton-cont" >
-            <div class="botton">contact</div>
-            <div class="below"><span></span></div>
+    </header>
+    <div class="side">
+        <div class="options">
+            <a href="#" class="button-cont cancel" >
+                <div class="button">cancel</div>
+                <div class="below"><span></span></div>
+            </a>
+            <a href="#" class="button-cont" >
+                <div class="button">home</div>
+                <div class="below"><span></span></div>
+            </a>
+            <a href="#" class="button-cont" >
+                <div class="button">portfolio</div>
+                <div class="below"><span></span></div>
+            </a>
+            <a href="#" class="button-cont" >
+                <div class="button">about</div>
+                <div class="below"><span></span></div>
+            </a>
+            <a href="#" class="button-cont" >
+                <div class="button">contact</div>
+                <div class="below"><span></span></div>
+            </a>
+            
         </div>
     </div>
 </body>

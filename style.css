@@ -113,7 +113,7 @@ header{
     justify-content: center;
     flex-direction: column;
 }
-.div-skill,.div-projects{
+.div-skill,.div-projects,.div-interest{
     font-style: italic;
     color: yellow;
     font-size: 80px;
@@ -146,8 +146,66 @@ dd{
     margin-left: 10px;
 }
 
-@media (max-width:660px) {
-    .welcome,.skill,.projects{
-        background:black ;
-    }
+
+.interest{
+    background: linear-gradient(rgb(0,0,0,0.9),rgb(0,0,0,0.9)),url(interest.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.interest .container .box{
+    margin-inline: 40px;
+}
+.music,.origami,.drawing,.story-books,.technology{
+    height: 30%;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.music .frame,
+.origami .frame,
+.drawing .frame,
+.story-books .frame,
+.technology .frame{
+    margin: 20px 0;
+}
+.music .frame .img{
+    background-image: url(music.jpg);
+}
+.origami .frame .img{
+    background-image: url(origami.jpg);
+}
+.drawing .frame .img{
+    background-image: url(drawing.jpg);
+}
+.story-books .frame .img{
+    background-image: url(comic.jpg);
+}
+.technology .frame .img{
+    background-image: url(tech.jpeg);
+}
+.music .frame .img,
+.origami .frame .img,
+.drawing .frame .img,
+.story-books .frame .img,
+.technology .frame .img{
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 400px;
+    height: 400px;
+    border-radius: 50px;
+}
+.music .des ,
+.origami .des,
+.drawing .des,
+.story-books .des,
+.technology .des{
+    /* color: black; */
+    font-size: 1rem;
+    width:400px;
 }

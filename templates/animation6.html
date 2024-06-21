@@ -1,0 +1,76 @@
+<!-- picture frame animation -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: rgba(0,0,0,0.9);
+        }
+        .list{
+            height: 90vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap:0.1rem;
+        }
+        .list{
+            transform-style: preserve-3d;
+            transform: perspective(1000px);
+        }
+        .list .item{
+            transition-duration: 1s;
+            filter:brightness(0);
+        }
+        .list .item:hover{
+            filter: brightness(1);
+            transform: translateZ(200px);
+            
+        }
+        .list .item:hover + *{
+            filter:brightness(0.6);
+            transform: translateZ(150px) rotateY(40deg);
+        } 
+        .list .item:hover + * + *{
+            filter:brightness(0.4);
+            transform: translateZ(70px) rotateY(20deg);
+        } 
+        .list .item:hover + * + * + *{
+            filter:brightness(0.2);
+            transform: translateZ(30px) rotateY(10deg);
+        } 
+        .list .item:has(+ *:hover){
+            filter:brightness(0.6);
+            transform: translateZ(150px) rotateY(-40deg);
+        }
+        .list .item:has(+ * + *:hover){
+            filter:brightness(0.4);
+            transform: translateZ(70px) rotateY(-20deg);
+        }
+        .list .item:has(+ * + * + *:hover){
+            filter:brightness(0.2);
+            transform: translateZ(30px) rotateY(-10deg);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="list">
+            <div class="item"><img width="100px" src="source/img1.jpg" alt=""></div>
+            <div class="item"><img width="100px" src="source/img2.jpg" alt=""></div>
+            <div class="item"><img width="100px" src="source/img3.jpg" alt=""></div>
+            <div class="item"><img width="100px" src="source/img4.jpg" alt=""></div>
+            <div class="item"><img width="100px" src="source/img5.jpg" alt=""></div>
+            <div class="item"><img width="100px" src="source/img6.jpg" alt=""></div>
+            <div class="item"><img width="100px" src="source/img7.jpg" alt=""></div>
+            <div class="item"><img width="100px" src="source/img8.jpg" alt=""></div>
+            <div class="item"><img width="100px" src="source/img9.jpg" alt=""></div>
+            <div class="item"><img width="100px" src="source/img10.jpg" alt=""></div>
+        </div>
+    </main>
+</body>
+</html>

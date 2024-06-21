@@ -1,17 +1,20 @@
-html{
+html {
     scroll-behavior: smooth;
 }
-body{
+
+body {
     margin: 0;
     padding: 0;
     /* background-color: rgba(0,0,0,0.8); */
     color: white;
     position: relative;
-    }
-.nav-behind{
-    height:9vh;
 }
-header{
+
+.nav-behind {
+    height: 9vh;
+}
+
+header {
     height: 9vh;
     width: 100vw;
     /* border: 1px solid black; */
@@ -22,15 +25,18 @@ header{
     position: fixed;
     background-color: #000000;
 }
-.title{
+
+.title {
     font-size: 2rem;
     color: #ff0000;
 }
-.nav-title{
+
+.nav-title {
     display: flex;
     justify-content: space-evenly;
 }
-.nav-title a{
+
+.nav-title a {
     text-decoration: none;
     display: flex;
     flex-direction: column;
@@ -38,58 +44,68 @@ header{
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
-.gap{
+
+.gap {
     margin-inline: 1rem;
 }
-.margin{
+
+.margin {
     margin-inline: 4rem;
 }
-.nav-title a:hover{
-    color:#ff0000;
+
+.nav-title a:hover {
+    color: #ff0000;
 }
 
 /* welcome section */
-.welcome{
+.welcome {
     color: #ff0000;
     height: 91vh;
     /* border: 2px solid red; */
-    background-image:  linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,.9)),url(welcome.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+        url(welcome.jpg);
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
 }
 
-.welcome{
+.welcome {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
 }
-.pro-title{
+
+.pro-title {
     font-family: monospace;
     font-weight: 600;
     font-size: 3em;
     text-wrap: wrap;
 }
-.span-profile{
-    color:yellow
+
+.span-profile {
+    color: yellow;
 }
-.pro-des{
+
+.pro-des {
     margin-block: 3rem;
     color: white;
     font-size: 1rem;
     text-wrap: wrap;
 }
-.photo img{
+
+.photo img {
     border-radius: 50%;
 }
-.button{
+
+.button {
     display: flex;
     justify-content: center;
     margin-block: 20px;
 }
-.button a{
-    border:1px solid red;
+
+.button a {
+    border: 1px solid red;
     border-radius: 20px;
     padding-inline: 10px;
     padding-block: 5px;
@@ -98,13 +114,15 @@ header{
     color: white;
 }
 
-.break{
-    background-color: rgba(0,0,0,0.8);
+.break {
+    background-color: rgba(0, 0, 0, 0.8);
 }
-.skill{
+
+.skill {
     height: 100vh;
-    color:white;
-    background-image:  linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,.9)),url(skill.jpg);
+    color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+        url(skill.jpg);
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -113,25 +131,31 @@ header{
     justify-content: center;
     flex-direction: column;
 }
-.div-skill,.div-projects,.div-interest{
+
+.div-skill,
+.div-projects,
+.div-interest {
     font-style: italic;
     color: yellow;
     font-size: 80px;
 }
-dt{
+
+dt {
     font-family: monospace;
     font-weight: 600;
     font-size: 2rem;
     color: #ff0000;
-    
 }
-dd{
+
+dd {
     font-size: 1rem;
 }
-.projects{
+
+.projects {
     height: 100vh;
-    color:white;
-    background-image:  linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,.9)),url(projects.jpg);
+    color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+        url(projects.jpg);
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -140,72 +164,129 @@ dd{
     justify-content: center;
     flex-direction: column;
 }
-.projects a{
+
+.projects a {
     text-decoration: none;
     color: #ff0000;
     margin-left: 10px;
 }
 
-
-.interest{
-    background: linear-gradient(rgb(0,0,0,0.9),rgb(0,0,0,0.9)),url(interest.jpg);
+.interest {
+    background: linear-gradient(rgb(0, 0, 0, 0.9), rgb(0, 0, 0, 0.9)),
+        url(interest.jpg);
     background-position: 50% 50%;
     background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.interest .container .box{
+
+.interest .container .box {
     margin-inline: 40px;
 }
-.music,.origami,.drawing,.story-books,.technology{
+
+.music,
+.origami,
+.drawing,
+.story-books,
+.technology {
     height: 30%;
-    /* border: 2px solid red; */
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
 }
+
 .music .frame,
 .origami .frame,
 .drawing .frame,
 .story-books .frame,
-.technology .frame{
+.technology .frame {
     margin: 20px 0;
 }
-.music .frame .img{
+
+.music .frame .img {
     background-image: url(music.jpg);
 }
-.origami .frame .img{
+
+.origami .frame .img {
     background-image: url(origami.jpg);
 }
-.drawing .frame .img{
+
+.drawing .frame .img {
     background-image: url(drawing.jpg);
 }
-.story-books .frame .img{
+
+.story-books .frame .img {
     background-image: url(comic.jpg);
 }
-.technology .frame .img{
+
+.technology .frame .img {
     background-image: url(tech.jpeg);
 }
+
 .music .frame .img,
 .origami .frame .img,
 .drawing .frame .img,
 .story-books .frame .img,
-.technology .frame .img{
+.technology .frame .img {
     background-size: cover;
     background-position: 50% 50%;
     width: 400px;
     height: 400px;
     border-radius: 50px;
 }
-.music .des ,
+
+.music .des,
 .origami .des,
 .drawing .des,
 .story-books .des,
-.technology .des{
-    /* color: black; */
+.technology .des {
     font-size: 1rem;
-    width:400px;
+    width: 400px;
+}
+
+/* education basis */
+.education .container{
+    color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.e-box {
+    /* position:absolute; */
+    height: 400px;
+    width: 60%;
+    border:2px solid black;
+}
+
+.e-frame {
+    width: inherit;
+    height: 400px;
+}
+.e-des{
+    position: absolute;
+    width: inherit;
+    height: 400px;
+    text-align: right;
+    /* background: linear-gradient(transparent,rgba(0,0,0,0.3)); */
+
+}
+.bsc .e-frame{
+    background: url(bsc.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.higher-sec .e-frame{
+    background: url(higher-sec.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.sec .e-frame{
+    background: url(sec.jpeg);
+    background-size: cover;
+    background-position: 50% 50%;
 }

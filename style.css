@@ -24,6 +24,7 @@ header {
     justify-content: space-around;
     position: fixed;
     background-color: #000000;
+    z-index: 100;
 }
 
 .title {
@@ -113,7 +114,9 @@ header {
     text-decoration: none;
     color: white;
 }
-
+.button a:hover{
+    background: red;
+}
 .break {
     background-color: rgba(0, 0, 0, 0.8);
 }
@@ -134,10 +137,12 @@ header {
 
 .div-skill,
 .div-projects,
-.div-interest {
+.div-interest,
+.div-education {
     font-style: italic;
     color: yellow;
     font-size: 80px;
+    margin-top: 100px;
 }
 
 dt {
@@ -235,7 +240,28 @@ dd {
     background-position: 50% 50%;
     width: 400px;
     height: 400px;
+    transition-duration:1s;
+    transform: scale(1.5);
+}
+
+.frame.box{
     border-radius: 50px;
+    overflow: hidden;
+}
+.music:hover .img{
+    transform: scale(1);
+}
+.origami:hover .img{
+    transform: scale(1);
+}
+.drawing:hover .img{
+    transform: scale(1);
+}
+.story-books:hover .img{
+    transform: scale(1);
+}
+.technology:hover .img{
+    transform: scale(1);
 }
 
 .music .des,
@@ -248,45 +274,184 @@ dd {
 }
 
 /* education basis */
-.education .container{
-    color: black;
+
+.education{
     display: flex;
-    align-items: center;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.e-box {
-    /* position:absolute; */
-    height: 400px;
-    width: 60%;
-    border:2px solid black;
+.e-box{
+    width: 500px;
+    height: 500px;
+    margin: 40px;
+    overflow: hidden;
+    border-radius: 40px;
+    position: relative;
 }
-
-.e-frame {
-    width: inherit;
-    height: 400px;
-}
-.e-des{
+.bsc.e-box::before{
+    content: "Bsc";
+    display: flex;
+    width: 500px;
+    height: 250px;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    width: inherit;
-    height: 400px;
-    text-align: right;
-    /* background: linear-gradient(transparent,rgba(0,0,0,0.3)); */
-
+    z-index: 1;
+    font-size: 40px;
+    background: linear-gradient(black,transparent);
+    color: white;
+    transition-duration: 1s;
+    transform: translateY(-250px);
+}
+.bsc.e-box:hover::before{
+    transform: translateY(0px);
+}
+.bsc.e-box::after{
+    content: "Ramakrishna mission vidyamandira(belur),howrah";
+    display: flex;
+    width: 500px;
+    height: 250px;
+    justify-content: right;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    font-size: 40px;
+    background: linear-gradient(transparent,black);
+    color: white;
+    transition-duration: 1s;
+    transform: translateY(0px);
+}
+.bsc.e-box:hover::after{
+    transform: translateY(-250px);
+}
+.e-frame{
+    transition-duration: 1s;
+    transform: scale(1.5);
+}
+.e-box:hover .e-frame{
+    transform: scale(1);
 }
 .bsc .e-frame{
+    width: 500px;
+    height: 500px;
     background: url(bsc.jpg);
-    background-size: cover;
-    background-position: 50% 50%;
+    background-size: cover;   
 }
 
 .higher-sec .e-frame{
+    width: 500px;
+    height: 500px;
     background: url(higher-sec.jpg);
     background-size: cover;
-    background-position: 50% 50%;
+}
+
+.higher-sec.e-box::before{
+    content: "Higher Secondary";
+    display: flex;
+    width: 500px;
+    height: 250px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    font-size: 40px;
+    background: linear-gradient(black,transparent);
+    color: white;
+    transition-duration: 1s;
+    transform: translateY(-250px);
+}
+.higher-sec.e-box:hover::before{
+    transform: translateY(0px);
+}
+.higher-sec.e-box::after{
+    content: "Torkona Jagabandhu High School(HS),Torkona,East Bardwan";
+    display: flex;
+    width: 500px;
+    height: 250px;
+    justify-content: right;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    font-size: 40px;
+    background: linear-gradient(transparent,black);
+    color: white;
+    transition-duration: 1s;
+    transform: translateY(0px);
+}
+.higher-sec.e-box:hover::after{
+    transform: translateY(-250px);
 }
 
 .sec .e-frame{
+    width: 500px;
+    height: 500px;
     background: url(sec.jpeg);
     background-size: cover;
+}
+
+.sec.e-box::before{
+    content: "Secondary(madyamik)";
+    display: flex;
+    width: 500px;
+    height: 250px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    font-size: 40px;
+    background: linear-gradient(black,transparent);
+    color: white;
+    transition-duration: 1s;
+    transform: translateY(-250px);
+}
+.sec.e-box:hover::before{
+    transform: translateY(0px);
+}
+.sec.e-box::after{
+    content: "Bahalalpur Ram Dayal High School(HS), Bahalalpur, Bankura";
+    display: flex;
+    width: 500px;
+    height: 250px;
+    justify-content: right;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    font-size: 40px;
+    background: linear-gradient(transparent,black);
+    color: white;
+    transition-duration: 1s;
+    transform: translateY(0px);
+    text-wrap: wrap;
+}
+.sec.e-box:hover::after{
+    transform: translateY(-250px);
+}
+.education {
+    background: linear-gradient(rgb(0, 0, 0, 0.9), rgb(0, 0, 0, 0.9)),
+        url(education.jpg);
     background-position: 50% 50%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacting{
+    height: 200px;
+    width: 100%;
+    background: #000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.item{
+    margin: 5px;
+}
+.contacting::after{
+    position:absolute;
+    bottom: 0px;
+    content: "© 2024 Rajkumar Das";
 }
